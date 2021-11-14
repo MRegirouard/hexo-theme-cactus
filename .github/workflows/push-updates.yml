@@ -1,0 +1,33 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Update AutoBoard Website Cactus Submodule
+
+on:
+  push:
+    branches: 
+      - main
+      
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with: 
+          repository: MRegirouard/AutoBoard-Website
+          token: ${{ secrets.WEBSITE_ACCESS_TOKEN }}
+
+      - name: Pull & Update Submodules Recursively
+        run: |
+          git submodule update --init --recursive
+          git submodule update --recursive --remote
+          
+      - name: Commit and Push Changes
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions - Update Submodules"
+          git add --all
+          git commit -m "Update submodules" || echo "No changes to commit"
+          git push
