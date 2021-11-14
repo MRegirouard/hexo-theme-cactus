@@ -1,6 +1,8 @@
-# Cactus
+# Our fork of Cactus
 
-A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal website.
+A responsive, clean and simple [Hexo](http://hexo.io) theme for our AutoBoard website.
+View the repository here: https://github.com/MRegirouard/AutoBoard-Website
+View the website here: https://mregirouard.github.io/AutoBoard-Website/
 
 :cactus: [Demo](https://probberechts.github.io/hexo-theme-cactus/)
 
@@ -38,7 +40,7 @@ A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal websi
 1. In the `root` directory:
 
     ```git
-    $ git clone https://github.com/probberechts/hexo-theme-cactus.git themes/cactus
+    $ git clone https://github.com/MRegirouard/hexo-theme-cactus.git themes/cactus
     ```
 
 2. Change the `theme` property in the `config.yml` file.
